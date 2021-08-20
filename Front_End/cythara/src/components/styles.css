@@ -1,0 +1,38 @@
+/*This is the necessary styling for most of the Links in the app*/
+.TopBarButtons{
+    color:white;
+    font-style: normal;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: left;
+    padding-inline-start: 10%;
+    font-size: 150%;
+    text-decoration: none;
+    
+  }
+/*This is the necessary styling for the body of the HTML */
+#body{
+  background-color: cornflowerblue;
+}
+
+/*This is the necessary styling for the Text on the Home Page*/
+#Text_Home{
+  color:white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+  font-size: 1000%;
+}
+
+/*This is the necessary styling for the Forms in the App*/
+.Forms{
+  padding-left: 50%;
+  scale: 20%;
+}
+/*This is the necessary styling for the Login Button in Login.js */
+#LoginBtn{
+  color:white;
+  font-style: normal;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: left;
+  padding-left: 50%;
+  font-size: 250%;
+}
