@@ -29,6 +29,6 @@ You start up by logging in to the website to register yourself and explore the w
 
 ### Leaderboard:
 After every duel, the player with his/her votes get updated into the leaderboard.
-  Hence, the leaderboard shows the top ranked artists of Cythara.
+   Hence, the leaderboard shows the top ranked artists of Cythara.
 
 
