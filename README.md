@@ -36,4 +36,3 @@ Hence, the leaderboard shows the top ranked artists of Cythara.
 
 Cythara provides a platform for creative artists by providing the tools to compete with other artists of similar interests.  It provides a new kind of challenge, with the help of AI, to help artists improvise and adapt to the competitive world.
 
-![alt text](swords (2).png)
