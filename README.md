@@ -8,13 +8,13 @@ similar interest in music take up new challenges and *Duel it out.*
 
 You start up by logging in to the website to register yourself and explore the website.
 
-Once you register:
+### Once you register:
 1. You can create a duel room by selecting a particular genre
 2. You can join an existing room with a genre of your interest
    * As a player to compete with your opponent
    * As audience to listen and judge the players
 
-Inside the duel room:
+### Inside the duel room:
 1. Players:
     * Start by downloading an AI generated background music of that genre.
     * Once the background music is generated, a **15 minute timer** starts.
@@ -26,4 +26,9 @@ Inside the duel room:
     * After the players upload their song, the Audience listen and judge the song.
     * They then have to vote for their favourite player
 3. The player with maximum votes from the audience wins the duel!
+
+### Leaderboard:
+After every duel, the player with his/her votes get updated into the leaderboard.
+  Hence, the leaderboard shows the top ranked artists of Cythara.
+
 
