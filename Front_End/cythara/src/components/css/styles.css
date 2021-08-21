@@ -1,0 +1,71 @@
+/*This is the necessary styling for most of the Links in the app*/
+.LinksType1{
+    color:white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 175%;
+    text-decoration: none;
+  }
+/*This is the necessary styling for the body of the HTML */
+#body{
+  background-color: cornflowerblue;
+}
+
+/*This is the necessary styling for the Text on the Home Page*/
+#TextType1{
+  color:white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-left:10%;
+  padding-top: 3%;
+  font-size: 500%;
+}
+
+/*This is the necessary styling for the Forms in the App*/
+.Forms{
+  text-align: center;
+  display: table-cell;
+  clear:left;
+  width: 210px;
+  height: 25px;
+}
+
+#LoginBtn{
+  font-size: 270%;
+  position:fixed;
+  color: white;
+  text-decoration: none;
+}
+
+
+.UserPlaceHolder1{
+  left: 65%;
+  position:absolute;
+}
+
+.UserPlaceHolder2{
+  left: 25%;
+  position:absolute;
+}
+
+.VerticalLine{
+  border-left: 6px solid black;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+}
+
+#MicImg{
+  padding-top: 8%;
+  padding-left: 35%;
+}
+
+#HomeBtn{
+  text-indent: 470%;
+  font-size:270%;
+  position:fixed
+}
+
+#LoginBtnHome{
+  text-indent:1255%;
+  font-size: 270%;
+  position:fixed
+}

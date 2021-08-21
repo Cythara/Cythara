@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles.css";
+import "../css/styles.css";
 /*
 class Login extends React.Component -> a class
 to log the name entered by the user,
@@ -8,7 +8,9 @@ in the "Forms" Field (Line 20).
 */
 class Login extends React.Component{
     state = {
-        name:""
+        name:"",
+        email:"",
+        password:""
     }
     handleSubmit = (e) =>{
         const name = e.target;
@@ -17,9 +19,13 @@ class Login extends React.Component{
     render(){
         return(
             <div>
-            <form className = "Forms">
-                <input type = "name" name = "Name" placeholder = "Enter your Name"required/>
-            </form>
+        
+            <input className = "Forms" type = "name" name = "Name" placeholder = "Enter your Username"required/>
+            <br/>
+            <input className = "Forms" type = "email" name = "Email" placeholder = "Enter your Email"required/>
+            <br/>
+            <input className = "Forms" type = "password" name = "Password" placeholder = "Enter your Password"required/>
+            <br/>
             <Link id = "LoginBtn" onClick = {this.handleSubmit} to ="/Welcome">Login</Link>
         </div>
         )
