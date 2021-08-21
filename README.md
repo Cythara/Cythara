@@ -28,7 +28,6 @@ You start up by logging in to the website to register yourself and explore the w
 3. The player with maximum votes from the audience wins the duel!
 
 ### Leaderboard:
-After every duel, the player with his/her votes get updated into the leaderboard.
-   Hence, the leaderboard shows the top ranked artists of Cythara.
+After every duel, the player with his/her votes get updated into the leaderboard.  Hence, the leaderboard shows the top ranked artists of Cythara.
 
 
