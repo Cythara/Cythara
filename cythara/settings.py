@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     'api',
+    'frontend',
 ]
 
 MIDDLEWARE = [
@@ -132,4 +133,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'api.User'
 
-ALLOWED_HOSTS = ['192.168.0.118']
+ALLOWED_HOSTS = ['192.168.0.118', '127.0.0.1']

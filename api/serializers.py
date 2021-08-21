@@ -1,6 +1,5 @@
-from django.db.models import fields
 from rest_framework import serializers
-from .models import Duel, Vote
+from .models import Duel, Vote, Genre
 
 
 class DuelSerializer(serializers.ModelSerializer):
@@ -22,3 +21,9 @@ class VoteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vote
         fields = ('duel', 'user', 'player')
+
+
+class GenreSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Genre
+        fields = ('genre_name',)

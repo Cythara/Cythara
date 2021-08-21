@@ -1,4 +1,4 @@
-from api.views import AddVoteDuel, CreateDuel, GetBackingTrack, GetDuel, JoinDuel, ListDuels, LogoutUser, RegisterUser, LoginUser
+from api.views import AddVoteDuel, CreateDuel, GetBackingTrack, GetDuel, JoinDuel, ListDuels, ListGenres, LogoutUser, RegisterUser, LoginUser
 from django.urls import path
 
 urlpatterns = [
@@ -17,6 +17,8 @@ urlpatterns = [
     path('register-user', RegisterUser.as_view()),
     path('logout-user', LogoutUser.as_view()),
     path('login-user', LoginUser.as_view()),
+
+    path('list-genres', ListGenres.as_view()),
 ]
 
 """

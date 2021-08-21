@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, generics
 from django.contrib.auth import authenticate, login, logout
-from api.serializers import DuelSerializer, VoteSerializer
+from api.serializers import DuelSerializer, GenreSerializer, VoteSerializer
 from .models import Duel, Genre, User, Vote
 import music.generate, music.utils
 from cythara.settings import MEDIA_ROOT
@@ -67,6 +67,9 @@ class ListDuels(generics.ListAPIView):
     queryset = Duel.objects.all()
     serializer_class = DuelSerializer
 
+class ListGenres(generics.ListAPIView):
+    queryset = Genre.objects.all()
+    serializer_class = GenreSerializer
 
 class JoinDuel(APIView):
     def post(self, request, format=None):
@@ -191,6 +194,7 @@ class LogoutUser(APIView):
         user_matches = User.objects.filter(username=request.user.username)
         if user_matches.exists():
             user_matches[0].duel_code = None
+            user_matches[0].save(update_fields=['duel_code'])
         logout(request)
         return Response({}, status=status.HTTP_200_OK)
 
