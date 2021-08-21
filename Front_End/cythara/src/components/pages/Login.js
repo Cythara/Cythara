@@ -19,13 +19,15 @@ class Login extends React.Component{
     render(){
         return(
             <div>
-        
-            <input className = "Forms" type = "name" name = "Name" placeholder = "Enter your Username"required/>
-            <br/>
-            <input className = "Forms" type = "email" name = "Email" placeholder = "Enter your Email"required/>
-            <br/>
-            <input className = "Forms" type = "password" name = "Password" placeholder = "Enter your Password"required/>
-            <br/>
+            <form className = "Forms">
+                <input type = "name" name = "Name" placeholder = "Enter your Username"required/>
+                <br/>
+                <input type = "email" name = "Email" placeholder = "Enter your Email"required/>
+                <br/>
+                <input type = "password" name = "Password" required/>
+                <br/>
+                
+            </form>
             <Link id = "LoginBtn" onClick = {this.handleSubmit} to ="/Welcome">Login</Link>
         </div>
         )
