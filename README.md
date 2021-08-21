@@ -16,14 +16,14 @@ Once you register:
 
 Inside the duel room:
 1. Players:
-  * Start by downloading an AI generated background music of that genre.
-  * Once the background music is generated, a **15 minute timer** starts.
-  * Players must use this time to come up with lyrics and/or other instrumental music of their choice, which suit with the background music.
-  * By the end of 15 minutes, the players must upload their **original** song.
+    * Start by downloading an AI generated background music of that genre.
+    * Once the background music is generated, a **15 minute timer** starts.
+    * Players must use this time to come up with lyrics and/or other instrumental music of their choice, which suit with the background music.
+    * By the end of 15 minutes, the players must upload their **original** song.
 2. Audience:
-  * Audience are basically the judge of this game.
-  * Audience continue joining while the players are making their music.
-  * After the players upload their song, the Audience listen and judge the song.
-  * They then have to vote for their favourite player
+    * Audience are basically the judge of this game.
+    * Audience continue joining while the players are making their music.
+    * After the players upload their song, the Audience listen and judge the song.
+    * They then have to vote for their favourite player
 3. The player with maximum votes from the audience wins the duel!
 
