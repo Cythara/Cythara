@@ -17,14 +17,27 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import getCookie from "./getCookie";
 import Menu from "@material-ui/core/Menu";
+import { fade } from "@material-ui/core/styles/colorManipulator";
 
 const useStyles = makeStyles((theme) => ({
     swords: {
         width: "13%",
+        backgroundColor: fade(theme.palette.secondary.main, 0.7),
+        borderRadius: "30em",
+        padding: "3em",
+    },
+
+    button: {
+        margin: theme.spacing(1),
+        borderRadius: "25em",
+        paddingLeft: "1em",
+        paddingRight: "1em",
+        fontSize: "1.25em",
+        backgroundColor: theme.palette.secondary.main,
     },
 }));
 
-export default function FindDuel() {
+export default function FindDuel(props) {
     const classes = useStyles();
 
     const [joinRoomDialogOpen, setJoinRoomDialogOpen] = useState(false);
@@ -77,7 +90,10 @@ export default function FindDuel() {
 
         fetch("/api/create-duel", requestOptions)
             .then((response) => response.json())
-            .then((data) => console.log(data));
+            .then((data) => {
+                console.log(data);
+                props.history.push("/duel");
+            });
     }
 
     function joinExistingRoom() {
@@ -97,7 +113,11 @@ export default function FindDuel() {
 
         fetch("/api/join-duel", requestOptions)
             .then((response) => response.json())
-            .then((data) => console.log(data));
+            .then((data) => {
+                console.log(data);
+                if (joinAsAudience) props.history.push("/voting");
+                else props.history.push("/duel");
+            });
     }
 
     return (
@@ -110,17 +130,27 @@ export default function FindDuel() {
                     src="/static/images/swords_img.png"
                     alt="2 Swords"
                     size="50%"
-                    class={classes.swords}
+                    className={classes.swords}
                 />
             </Grid>
 
             <Grid item align="center" xs={12}>
-                <Typography>Get Ready To Duel!</Typography>
+                <Typography component="h1" variant="h4">
+                    Get Ready To Duel!
+                </Typography>
+            </Grid>
+            <Grid item align="center" xs={12}>
+                <Typography>
+                    Create a new match or join an existing one using a code.
+                </Typography>
             </Grid>
 
             <Grid container item xs={12} spacing={2} align="center">
                 <Grid item xs align="center">
-                    <Button onClick={(e) => setCreateRoomDialogOpen(true)}>
+                    <Button
+                        onClick={(e) => setCreateRoomDialogOpen(true)}
+                        className={classes.button}
+                    >
                         Create Duel
                     </Button>
                     <Dialog
@@ -171,7 +201,10 @@ export default function FindDuel() {
                 </Grid>
 
                 <Grid item xs align="center">
-                    <Button onClick={() => setJoinRoomDialogOpen(true)}>
+                    <Button
+                        onClick={() => setJoinRoomDialogOpen(true)}
+                        className={classes.button}
+                    >
                         Join Duel
                     </Button>
                     <Dialog

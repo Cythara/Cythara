@@ -4,7 +4,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./HomePage";
 import LoginPage from "./LoginPage";
 import FindDuel from "./FindDuel";
-import { ThemeProvider, createTheme } from "@material-ui/core";
+import LeaderBoard from "./Leaderboard";
+import Duel from "./Duel";
+import Votes from "./Votes";
+import { ThemeProvider, createTheme, CssBaseline } from "@material-ui/core";
 
 export default function App() {
     return (
@@ -14,12 +17,14 @@ export default function App() {
                 <Route path="/home" component={HomePage} />
                 <Route path="/login" component={LoginPage} />
                 <Route path="/find-duel" component={FindDuel} />
+                <Route path="/duel" component={Duel} />
+                <Route path="/leaderboard" component={LeaderBoard} />
+                <Route path="/voting" component={Votes} />
             </Switch>
         </Router>
     );
 }
 
-// <Route path="/leaderboard" component={LeaderBoard} />
 const theme = createTheme({
     palette: {
         primary: {
@@ -28,15 +33,19 @@ const theme = createTheme({
             dark: "#0000000",
         },
         secondary: {
-            main: "#f44336",
+            main: "#c45346",
         },
+    },
+
+    typography: {
+        fontFamily: `"Roboto", "Helvetica", "Arial", sans-serif`,
     },
 });
 
 const appDiv = document.getElementById("app");
 render(
     <ThemeProvider theme={theme}>
-        {" "}
+        <CssBaseline />
         <App />{" "}
     </ThemeProvider>,
     appDiv

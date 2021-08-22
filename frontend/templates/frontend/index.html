@@ -7,10 +7,14 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}"
     />
+    <script src="https://unpkg.com/wavesurfer.js"></script>
   </head>
   <body>
     <div id="main">
-      <div id="app"></div>
+      <div id="app" style="
+          background-image: url('/media/images/bgimage.jpg');
+          background-size: cover;
+          " ></div>
     </div>
 
     <script src="{% static "frontend/main.js" %}"></script>

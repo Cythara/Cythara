@@ -46,7 +46,7 @@ class User(AbstractBaseUser):
     objects = UserManager()
 
     user_score = models.PositiveIntegerField(default=0)
-    duel_code = models.CharField(max_length=6, default=None, null=True)
+    duel_code = models.CharField(max_length=6, default="", null=True, blank=True)
 
     def has_perm(self, perm, obj=None):
         return self.is_admin
@@ -105,15 +105,13 @@ class Duel(models.Model):
     track_duration=models.PositiveIntegerField(default=60)
 
 
-class Track(models.Model):
-    user=models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    genre=models.ForeignKey(Genre, on_delete=models.RESTRICT)
-    track=models.FileField()
-    votes=models.PositiveIntegerField()
-    creation=models.DateTimeField(auto_now_add=True)
-
-
 class Vote(models.Model):
     duel=models.ForeignKey(Duel, on_delete=models.CASCADE)
     user=models.ForeignKey(User, on_delete=models.CASCADE)
     player=models.PositiveSmallIntegerField()
+
+
+class TrackCodes(models.Model):
+    duel = models.ForeignKey(Duel, on_delete=models.SET_NULL, null=True)
+    code1 = models.CharField(max_length=50, unique=True, default="")
+    code2 = models.CharField(max_length=50, unique=True, default="")
