@@ -61,8 +61,8 @@ class RecordMusic extends React.Component{
 
     uploadFile = async (e) =>{
         e.preventDefault();
-        const formData = new formData();
-        formData.append("file",file);
+        const formData = new FormData();
+        formData.append("file",this.state.file);
         console.log(formData)
         //make post request to server
     }
