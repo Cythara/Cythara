@@ -9,20 +9,19 @@ in the "Forms" Field (Line 20).
 class Login extends React.Component{
     state = {
         name:"",
-        email:"",
-        password:""
+        password:"",
+        entered:false
     }
     handleSubmit = (e) =>{
         const name = e.target;
         this.setState([name])
+        this.entered = true
     }
     render(){
         return(
             <div>
             <form className = "Forms">
                 <input type = "name" name = "Name" placeholder = "Enter your Username"required/>
-                <br/>
-                <input type = "email" name = "Email" placeholder = "Enter your Email"required/>
                 <br/>
                 <input type = "password" name = "Password" required/>
                 <br/>
