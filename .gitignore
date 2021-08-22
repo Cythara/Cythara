@@ -259,3 +259,4 @@ dist
 # Sound files
 *.mid
 *.mp3
+*.wav
